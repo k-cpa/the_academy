@@ -1,0 +1,94 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+#connect {
+    @include mixin.flex;
+    width: 100vw;
+    height: 90vh; 
+
+    .connect_container {
+        position: relative;
+        @include mixin.flex ($direction: column);
+        width: 50%;
+        height: 70%;
+        border-radius: 40px;
+        background-color: rgba(var.$secondaryColor, .3);
+
+        h4 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        form {
+            @include mixin.flex (column, center, center);
+            width: 60%;
+            height: 80%;
+
+            input {
+                all: unset;
+                background-color: #D1D1C7;
+                margin-top: .5rem;
+                margin-bottom: 2rem;
+                border-radius: 5px;
+                height: 5%;
+                width: 45%;
+                padding-left: 5px;
+                color: black;
+
+                &:focus {
+                    background-color: #acaca2;
+                }
+
+                &::placeholder {
+                    color: black;
+                }
+
+            }
+
+            // PARTIE SIGN IN SEULE MODIFICATION ALORS J'INTEGRE DIRECTEMENT ICI 
+
+            .elementsChoice {
+                @include mixin.flex;
+                height: 5%;
+                width: 90%;
+                gap: 5%;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
+            }
+
+            select {
+                all: unset;
+                background-color: #D1D1C7;
+                border-radius: 5px;
+                height: 100%;
+                width: 40%;
+                color: black;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                    background-color: #acaca2;
+                }
+
+            }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+            button {
+                all: unset;
+                padding: 3px 10px;
+                border-radius: 10px;
+                margin-top: 1rem;
+                color: #D1D1C7;
+                font-size: 1.5rem;
+                transition: .3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    // faire un défragmentation lettre par lettre au hover avec GSAP par la suite si le temps.
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

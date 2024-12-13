@@ -1,0 +1,17 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+#codex_bestiary {
+    @include mixin.flex;
+    width: 100vw;
+    height: 90vh;
+    gap: 8rem;
+
+    article {
+        @include mixin.flex;
+        width: 450px;
+        height: 600px;
+        background-color: rgba(var.$secondaryColor, .3);
+        border-radius: 20px;
+    }
+}
