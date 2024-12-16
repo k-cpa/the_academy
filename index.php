@@ -1,4 +1,4 @@
-<?php include ('database.php')?>
+<?php include ('database.php') ?>
 <!-- COUCOU LUDO :::: MOT DE PASSE USERS SYSTEMATIQUEMENT username sans majuscule  -->
 <!DOCTYPE html>
 <html lang="fr">

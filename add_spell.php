@@ -31,7 +31,7 @@
                 // Déplace l'image dans le dossier 
                 move_uploaded_file($tmpName, $location.$uniqueFileName);
             } else {
-                echo "Veuillez choisir une image au format PNG, JPEG, WEBP, BMP ou SVG";
+                echo "Please choose an image in PNG, JPEG, WEBP, BMP, or SVG format.";
                 exit;
             }
         }
@@ -50,7 +50,7 @@
                 VALUES (:spell_name, :description, :image, :user_id, :element_id)
             ');
     
-            // Exécute la requette 
+            // Exécute la requete 
             $request->execute([
                 'spell_name' => $spell_name,
                 'description' => $description,

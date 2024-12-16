@@ -63,14 +63,11 @@
                 <p><span>Element</span><?= $data['element_name']  ?></p>
                 <p><span>Imported by</span><?= $data['username']  ?></p>
             </div>
-
-            <?php if(isset($_SESSION['id'])): ?>
-                <?php if($_SESSION['id']==$data['user_id'] || $_SESSION['role'] != NULL): ?>
+            <?php if($_SESSION['id']==$data['user_id']): ?>
                 <div class="action">
-                    <a href="modify.php?id=<?= $data['spell_id']?>">modifier</a>
-                    <a href="delete.php?id=<?= $data['spell_id']?>&source=codex">supprimer</a>
+                    <a href="modify_spell.php?id=<?= $data['spell_id']?>">Edit</a>
+                    <a href="delete.php?id=<?= $data['spell_id']?>&source=codex">Delete</a>
                 </div>
-                <?php endif ?>
             <?php endif ?>
             </article>
         <?php endwhile; ?>
