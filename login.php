@@ -37,6 +37,8 @@
                 // PDO//FETCH_ASSOC = constante qui spécifie que les données doivent être retournées sous forme de tableau associatif //
                 $_SESSION['element'] = $getElements->fetchAll(PDO::FETCH_ASSOC);
                 
+               
+                
 
                 header('location:index.php');
                 exit;

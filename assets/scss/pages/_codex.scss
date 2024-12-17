@@ -5,21 +5,68 @@
     @include mixin.flex ($direction: column);
     width: 100vw;
 
+    a {
+        display: block;
+        color: var.$textColor;
+        background-color: rgba(var.$secondaryColor, .5);
+        padding: 5px 10px;
+        border-radius: 10px;
+        transition: .3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     .codex_title {
         @include mixin.flex ($direction: column);
         gap: 1rem;
 
-        a {
-            display: block;
-            color: var.$textColor;
-            background-color: rgba(var.$secondaryColor, .5);
-            padding: 5px 10px;
-            border-radius: 10px;
-            transition: .3s ease;
+    }
 
-            &:hover {
-                transform: scale(1.1);
+    .codex_container {
+        @include mixin.flex ($direction: column);
+        
+        article {
+            @include mixin.flex ($direction: column);
+            width: 70%;
+            border-radius: 5px;
+            box-shadow: var.$secondaryColor 0px 7px 29px 0px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-image: url('../img/bg_spell.webp');
+
+            &:first-child {
+                margin-top: 1.5rem;
             }
+        } 
+
+        .spell_title {
+            margin-bottom: 1rem;
+        }
+
+        .spell_elements {
+            @include mixin.flex;
+        }
+
+        .img_wrapper {
+            margin-right: 1rem;
+            width: 15%;
+        }
+
+        .action {
+            @include mixin.flex;
+            gap: 2rem;
+        }
+
+        span {
+            display: block;
+            text-decoration: underline;
+            margin-bottom: .2rem;
+        }
+
+        p {
+            margin-bottom: 0.2rem;
         }
     }
 }

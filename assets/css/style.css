@@ -246,14 +246,7 @@ body {
   align-items: center;
   width: 100vw;
 }
-#codex .codex_title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-#codex .codex_title a {
+#codex a {
   display: block;
   color: #f9f1d9;
   background-color: rgba(38, 39, 43, 0.5);
@@ -261,8 +254,64 @@ body {
   border-radius: 10px;
   transition: 0.3s ease;
 }
-#codex .codex_title a:hover {
+#codex a:hover {
   transform: scale(1.1);
+}
+#codex .codex_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#codex .codex_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#codex .codex_container article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: #26272B 0px 7px 29px 0px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-image: url("../img/bg_spell.webp");
+}
+#codex .codex_container article:first-child {
+  margin-top: 1.5rem;
+}
+#codex .codex_container .spell_title {
+  margin-bottom: 1rem;
+}
+#codex .codex_container .spell_elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#codex .codex_container .img_wrapper {
+  margin-right: 1rem;
+  width: 15%;
+}
+#codex .codex_container .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#codex .codex_container span {
+  display: block;
+  text-decoration: underline;
+  margin-bottom: 0.2rem;
+}
+#codex .codex_container p {
+  margin-bottom: 0.2rem;
 }
 
 #add {
