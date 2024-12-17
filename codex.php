@@ -6,10 +6,11 @@
             s.spell_id as spell_id,
             s.spell_name as spell_name,
             s.description as description,
+            s.element_id as element_id,
             s.image as image,
             u.user_id as user_id,
             u.username as username,
-            e.element_id as element_id,
+            e.element_id as e_element_id,
             e.element_name as element_name
         FROM
             spells as s
@@ -43,8 +44,8 @@
  
         <!-- Récuparation REQUEST -->
         <?php while ($data = $request->fetch()) : 
-        
-        ?>
+                 var_dump($_SESSION['element']); var_dump($data['element_id']);
+                ?>
             <article>
             <div class="img_wrapper">
                 <!-- Condition pour afficher l'image, ou l'image générique -->
@@ -63,7 +64,7 @@
                 <p><span>Element</span><?= $data['element_name']  ?></p>
                 <p><span>Imported by</span><?= $data['username']  ?></p>
             </div>
-            <?php if($_SESSION['id']==$data['user_id']): ?>
+            <?php if(isset($_SESSION['element']) && in_array($data['element_id'], $_SESSION['element'])): ?>
                 <div class="action">
                     <a href="modify_spell.php?id=<?= $data['spell_id']?>">Edit</a>
                     <a href="delete.php?id=<?= $data['spell_id']?>&source=codex">Delete</a>

@@ -25,7 +25,7 @@
                 $_SESSION['role'] = $user['role'];
 
                 $getElements = $bdd->prepare ('
-                    SELECT *
+                    SELECT elements.element_id
                     FROM elements
                     INNER JOIN users_elements ON elements.element_id = users_elements.element_id
                     WHERE users_elements.user_id = :user_id
@@ -36,6 +36,7 @@
                 // Permet de retourner toutes les lignes sous forme de tableau 
                 // PDO//FETCH_ASSOC = constante qui spécifie que les données doivent être retournées sous forme de tableau associatif //
                 $_SESSION['element'] = $getElements->fetchAll(PDO::FETCH_ASSOC);
+                
 
                 header('location:index.php');
                 exit;

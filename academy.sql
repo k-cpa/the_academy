@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 13 déc. 2024 à 15:42
+-- Généré le : mar. 17 déc. 2024 à 09:12
 -- Version du serveur : 8.0.35
 -- Version de PHP : 8.2.20
 
@@ -109,9 +109,6 @@ CREATE TABLE `spells` (
 --
 
 INSERT INTO `spells` (`spell_id`, `spell_name`, `user_id`, `element_id`, `image`, `description`) VALUES
-(3, 'Fire Shield', 2, 2, 'Image_675c4dab224537.22112915.webp', 'Fire Shield surrounds the caster with flames, damaging nearby enemies and providing fire resistance.'),
-(4, 'Fireball', 2, 2, 'Image_675c4dc394ebf2.49576977.webp', 'Fireball conjures a fiery sphere that explodes on impact, dealing damage to enemies in its blast radius.'),
-(5, 'Celestial Armor', 2, 3, 'Image_675c4de783a231.25215071.webp', 'Envelops the caster in a protective aura, greatly reducing damage from both physical and magical attacks.'),
 (6, 'Fire Elemental', 5, 2, 'Image_675c4e1d3ca888.63580416.webp', 'Summons a fiery being to fight for the caster, dealing burning damage to enemies within range.'),
 (7, 'Immolation', 5, 2, 'Image_675c4e7e25d077.97526385.webp', 'Engulfs the caster in flames, causing them to deal fire damage to nearby enemies over time while taking damage themselves.'),
 (8, 'Firestorm', 5, 2, 'Image_675c4e8f9ac754.45228857.webp', 'Summons a fierce storm of flames, dealing massive fire damage to all enemies in its area of effect.'),
@@ -120,7 +117,11 @@ INSERT INTO `spells` (`spell_id`, `spell_name`, `user_id`, `element_id`, `image`
 (11, 'Light Elemental', 3, 3, 'Image_675c4f00d86bc9.45450662.webp', 'The Light Elemental conjures a radiant being of pure light, dealing holy damage to enemies and healing allies within its reach.'),
 (12, 'Purification', 3, 3, 'Image_675c4f1d54cde6.70023603.webp', 'Purification cleanses allies of harmful effects, restoring their health and removing debuffs.'),
 (13, 'Retribution', 3, 3, 'Image_675c4f3a428af2.96548511.webp', 'Retribution channels vengeful energy, dealing damage to enemies who have harmed the caster.'),
-(14, 'Healing', 3, 3, 'Image_675c4f4e4d8b13.21730930.webp', 'Healing restores a portion of the caster&#039;s or ally&#039;s health, mending wounds and rejuvenating strength.');
+(14, 'Healing', 3, 3, 'Image_675c4f4e4d8b13.21730930.webp', 'Healing restores a portion of the caster&#039;s or ally&#039;s health, mending wounds and rejuvenating strength.'),
+(15, 'Lightning', 4, 4, 'Image_675ffa04bf7c51.33013267.webp', 'A powerful spell that summons a swift electrical discharge to strike enemies.'),
+(16, 'Gale Force', 4, 4, 'Image_675ffa1fd9ee76.48272951.webp', 'A spell that summons a violent burst of wind to disrupt and damage enemies.\r\n\r\n'),
+(17, 'Fire Shield', 2, 2, 'Image_676035bad69a19.04074981.webp', 'Fire Shield creates a protective aura of flames around the caster, reducing fire damage and damaging enemies who come close.'),
+(18, 'Fireball', 2, 2, 'Image_676035d2428d37.06573467.webp', 'Launches a burst of fire that explodes on impact, dealing area damage to enemies within its blast radius.');
 
 -- --------------------------------------------------------
 
@@ -279,7 +280,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT pour la table `spells`
 --
 ALTER TABLE `spells`
-  MODIFY `spell_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `spell_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `type`

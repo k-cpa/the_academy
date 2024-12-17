@@ -1,4 +1,6 @@
-<?php include ('database.php') ?>
+<?php include ('database.php');
+    var_dump($_SESSION);
+?>
 <!-- COUCOU LUDO :::: MOT DE PASSE USERS SYSTEMATIQUEMENT username sans majuscule  -->
 <!DOCTYPE html>
 <html lang="fr">
